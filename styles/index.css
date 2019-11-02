@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+    background: linear-gradient(#00b7ff, #a2c4f8, #a7f9ff, #ace2e9, #d1f5f5, #ffffff);
+    background-attachment: fixed;
+}
+table, td, tr, th {
+    background: white;
+    border: .2vh solid black;
+    border-spacing: 0;
+}
+thead > tr:first-child {
+    font-size: 10vh;
+    font-weight: 900;
+}
+thead > tr:nth-child(2) {
+    font-size:4vh;
+    font-weight: bolder;
+}
+table {
+    overflow: hidden;
+    border-radius: 3vh;
+    margin: 5vmin 7vmax;
+    width: 86vmax;
+}
+td {
+    padding: 2vh;
+    text-align: center;
+}
