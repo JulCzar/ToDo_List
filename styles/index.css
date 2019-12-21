@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background: linear-gradient(#00b7ff, #a2c4f8, #a7f9ff, #ace2e9, #d1f5f5, #ffffff);
+    background: gray;
     background-attachment: fixed;
 }
 table, td, tr, th {
@@ -26,4 +26,9 @@ table {
 td {
     padding: 2vh;
     text-align: center;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
 }

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <form id="formulario" action="Nomes">
         <label for="title">Titulo</label>
@@ -33,11 +34,16 @@
             </tr>
         </thead>
         <tbody id="tabela">
-            
+            <tr id="noToDo">
+                <td colspan="5">Você ainda não definiu afazeres</td>
+            </tr>
         </tbody>
+        
     </table>
-    <script src="scripts/paths.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="https://julczar.github.io/CzarK/index.js"></script>
+    <script src="js/paths.js"></script>
+    <script src="js/index.js">
+        (() => carregarListaSalva())();</script>
 </body>
 
 
