@@ -1,49 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>To Do</title>
 </head>
 
 <body>
-    <form id="formulario" action="Nomes">
-        <label for="title">Titulo</label>
-        <input id="title" name="titulo" type="text">
+    <header id="cabecalho">
+        <div id="logo">
+            <i class="material-icons">done</i>
+            <h2>Lista de Afazeres</h2>
+        </div>
+    </header>
 
-        <label for="description">Descrição</label>
-        <input id="description" name="descricao" type="text">
-
-        <button id="botao" type="submit">Enviar</button>
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th colspan="5">Lista de Afazeres</th>
-            </tr>
-            <tr>
-                <th>Titulo</th>
-                <th>Descrição</th>
-                <th colspan="2">Ações</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody id="tabela">
-            <tr id="noToDo">
-                <td colspan="5">Você ainda não definiu afazeres</td>
-            </tr>
-        </tbody>
+    <div id="container">
+        <div id="form">
+            <form id="formulary" action="Nomes">
+                <div class="row">
+                    <label for="title">Titulo</label>
+                    <input 
+                        id="title"
+                        class="text-box"
+                        name="title"
+                        type="text"
+                        required
+                    />
+                </div>
         
-    </table>
-    <script src="https://julczar.github.io/CzarK/index.js"></script>
-    <script src="js/paths.js"></script>
-    <script src="js/index.js">
-        (() => carregarListaSalva())();</script>
+                <div class="row">
+                    <label for="desc">Descrição</label>
+                    <input
+                        id="desc"
+                        class="text-box"
+                        name="desc"
+                        type="text"
+                        required
+                    />
+                </div>
+        
+                <input id="botao" type="submit"></input>
+            </form>
+        </div>
+
+        <div id="table">
+            <div class="table-title">
+                <h1>Lista</h1>
+            </div>
+            <div class="table-body">
+                <div id="empty" class="row empty">
+                    <div class="col title">Você ainda não digitou nada</div>
+                    <div class="col desc">Use o menu para começar a se programar</div>
+                    <div class="col material-icons">edit</div>
+                    <div class="col material-icons">clear</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
 </body>
 
 
