@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +18,26 @@
             </div>
         </header>
 
-        <label for="description">Descrição</label>
-        <input id="description" name="descricao" type="text">
+        <div class="page">
+            <div class="form">
+                <form action="createToDo" class="form-box">
+                    <div class="title">
+                        <label for="title">Title</label>
+                        <input class="data-input" type="text" id="title" required>
+                    </div>
+                    <div class="desc">
+                        <label for="desc">Description</label>
+                        <input class="data-input" type="text" id="desc" required>
+                    </div>
+                    <input class="submit" type="submit">
+                </form>
+            </div>
 
-        <button id="botao" type="submit">Enviar</button>
-    </form>
+            <div class="list">
+                <div class="table-head">
+                    <h3 class="table-title">Lista</h3>
+                </div>
+                <div id="to-dos" class="to-dos">
 
                     <!-- This is a Todo Sample -->
                     <div class="to-do">
