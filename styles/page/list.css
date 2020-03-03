@@ -17,12 +17,12 @@
     width: 100%;
 }
 
-.material-icons {
+.list .material-icons {
     border-radius: 50%;
     transition: .5s;
     padding: 5px;
 }
 
-.material-icons:hover {
+.list .material-icons:hover {
     background-color: #d3d3d3;
 }
