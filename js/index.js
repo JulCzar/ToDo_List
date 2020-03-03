@@ -46,7 +46,7 @@ function createNewToDo(data) {
             </div>
             <div class="to-do-actions">
                 <i onclick='editElement("${data.id}")' class="material-icons">edit</i>
-                <i class="material-icons">clear</i>
+                <i onclick='deleteElement("${data.id}")' class="material-icons">clear</i>
             </div>
         </div>`
     )

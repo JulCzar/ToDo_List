@@ -1,14 +1,14 @@
 const editElement = id => {
-    let LocalToDoList = get.Local('localToDoList')
+    const LocalToDoList = get.Local('localToDoList')
     const ToDosOnScreen = get.Queries('.to-do')
 
-    for (const index in LocalToDoList) {
-        if (toDo[index].id == id) {
-            get.Id('title').value = toDo[index].title
-            get.Id('desc').value = toDo[index].desc
-            del.fromArray(index)
+    LocalToDoList.forEach((toDo, i) => {
+        if (toDo.id == id) {
+            get.Id('title').value = toDo.title
+            get.Id('desc').value = toDo.desc
+            LocalToDoList.splice(i, 1)
         }
-    }
+    })
 
     for (const toDo of ToDosOnScreen) {
         del.element(toDo)
