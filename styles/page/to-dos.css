@@ -22,8 +22,11 @@
     flex-direction: column;
 }
 
+.to-do-title {
+    font-size: 17px;
+}
+
 .to-do-desc {
-    text-indent: 5px;
     color: gray;
     font-weight: 500;
 }

@@ -20,7 +20,7 @@
 
         <div class="page">
             <div class="form">
-                <form action="createToDo" class="form-box">
+                <form id="form" action="createToDo" class="form-box">
                     <div class="title">
                         <label for="title">Title</label>
                         <input class="data-input" type="text" id="title" required>
@@ -35,32 +35,18 @@
 
             <div class="list">
                 <div class="table-head">
-                    <h3 class="table-title">Lista</h3>
+                    <h3 class="table-title">List</h3>
                 </div>
-                <div id="to-dos" class="to-dos">
-
-                    <!-- This is a Todo Sample -->
-                    <div class="to-do">
-                        <div class="to-do-content">
-                            <i class="material-icons">check_circle_outline</i>
-                            <div class="to-do-info">
-                                <h2 class="to-do-title">Title</h2>
-                                <h5 class="to-do-desc">Desc</h5>
-                            </div>
-                        </div>
-                        <div class="to-do-actions">
-                            <i class="material-icons">edit</i>
-                            <i class="material-icons">clear</i>
-                        </div>
-                    </div>
-                    <!-- This is the end of a TodoSample -->
-                </div>
+                <div id="to-dos" class="to-dos"></div>
             </div>
         </div>
     </div>
 
     <script src="https://julczar.github.io/CzarK/index.js"></script>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/utils/check.js"></script>
+    <script src="./js/utils/edit.js"></script>
+    <script src="./js/utils/delete.js"></script>
 </body>
 
 </html>
