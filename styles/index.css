@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap');
 
 @import './head.css';
 @import './page.css';
