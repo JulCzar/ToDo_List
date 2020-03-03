@@ -55,6 +55,10 @@ function createNewToDo(data) {
     )
 }
 
+function checkIfIsEditing() {
+    confirm('There is an edition in progress, do you still want to continue?')
+}
+
 //Loaded once function that restore the To Do List in page from the Data Saved in Local Storage
 ;(async function () {
     const ToDoList = get.Local('localToDoList')
@@ -71,6 +75,9 @@ function createNewToDo(data) {
         set.Local('localToDoList', ToDoList)
     }
 
+    window.onbeforeunload = function() {
+        if (this.isEditing) return confirm();
+    }
 })()
 
 // Listen function that observes submits and load saveToDo() function
