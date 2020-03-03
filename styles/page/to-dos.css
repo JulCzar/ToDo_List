@@ -1,0 +1,33 @@
+.to-dos {
+    flex-direction: column;
+    padding: 15px 5px;
+}
+
+.to-do {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.to-do, .to-do-content {
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.to-do-content > * {
+    padding-right: 10px;
+}
+
+.to-do-info {
+    flex-direction: column;
+}
+
+.to-do-desc {
+    text-indent: 5px;
+    color: gray;
+    font-weight: 500;
+}
+
+.to-do-actions > * {
+    margin-left: 5px;
+}

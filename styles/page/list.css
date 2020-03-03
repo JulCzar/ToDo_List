@@ -1,0 +1,28 @@
+@import './to-dos.css';
+
+.list {
+    flex-direction: column;
+    width: 750px;
+}
+
+.table-head, .table-title {
+    justify-content: center;
+    align-items: center;
+}
+
+.table-head {
+    border-bottom: var(--border);
+    padding: 5px;
+    height: 35px;
+    width: 100%;
+}
+
+.material-icons {
+    border-radius: 50%;
+    transition: .5s;
+    padding: 5px;
+}
+
+.material-icons:hover {
+    background-color: #d3d3d3;
+}

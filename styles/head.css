@@ -1,0 +1,18 @@
+#head {
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .15);
+    background: var(--primary);
+    align-items: center;
+    position: fixed;
+    color: white;
+    height: 50px;
+    width: 100vw;
+    top: 0;
+}
+
+.logo {
+    align-items: center;
+}
+
+.logo .material-icons {
+    padding: 9px;
+}

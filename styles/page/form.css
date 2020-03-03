@@ -1,0 +1,40 @@
+.form .form-box {
+    flex-direction: column;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.title, .desc {
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.data-input {
+    border-bottom: var(--border);
+    margin-top: 10px;
+    padding: 5px;
+    height: 25px;
+}
+
+.submit {
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: .8s;
+    cursor: pointer;
+    outline: unset;
+    padding: 15px;
+}
+
+.submit:hover {
+    background-color: green;
+    transition: .3s;
+    color: white;
+}
+
+@media (max-width: 950px) {
+    .form-box {
+        width: 100%;
+    }
+}
