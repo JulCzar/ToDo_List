@@ -1,7 +1,11 @@
 const editElement = id => {
     const LocalToDoList = get.Local('localToDoList')
     const ToDosOnScreen = get.Queries('.to-do')
-
+    
+    if(isEditing){
+        alert('There is already an editing in progress!')
+        return
+    }else isEditing = true
     LocalToDoList.forEach((toDo, i) => {
         if (toDo.id == id) {
             get.Id('title').value = toDo.title

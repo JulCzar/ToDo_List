@@ -1,5 +1,8 @@
+var isEditing = false
+
 // Function that save the input from user
 const saveToDo = ev => {
+    isEditing = false
     // prevent the page from reloading at submit
     ev.preventDefault()
 
@@ -19,7 +22,7 @@ const saveToDo = ev => {
     //End of saveToDo()
 
     function saveDataToLocalStorage() {
-        let localList = get.Local('localToDoList')
+        let localList = get.Local('localToDoList') || []
 
         localList.push(newToDo)
 
@@ -67,6 +70,7 @@ function createNewToDo(data) {
 
         set.Local('localToDoList', ToDoList)
     }
+
 })()
 
 // Listen function that observes submits and load saveToDo() function
