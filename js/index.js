@@ -40,8 +40,8 @@ const saveToDo = ev => {
 function createNewToDo(data) {
     return (
         `<div class="to-do" id='${data.id}'>
-            <div class="to-do-content">
-                <i onclick='checkElement("${data.id}")' class="material-icons">${data.status?'check_circle_outline':'radio_button_unchecked'}</i>
+            <div onclick='checkElement("${data.id}")' class="to-do-content">
+                <i class="material-icons">${data.status?'check_circle_outline':'radio_button_unchecked'}</i>
                 <div class="to-do-info">
                     <h2 class="to-do-title">${data.title}</h2>
                     <h5 class="to-do-desc">${data.desc}</h5>
