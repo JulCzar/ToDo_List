@@ -49,4 +49,5 @@ body.dark {
 
 @media (max-width: 950px) {
     #app > * { display: block }
+    #head {display: flex;}
 }
