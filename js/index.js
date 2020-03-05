@@ -1,5 +1,4 @@
 var isEditing = false
-var theme = "light"
 
 // Function that save the input from user
 const saveToDo = ev => {
@@ -61,12 +60,12 @@ function checkIfIsEditing() {
 }
 
 const changeTheme = () => {
-    if (theme == "light") {
-        theme = "dark"
+    if (!get.Local('theme')) {
+        set.Local('theme', true)
         get.Id('page-body').classList.remove('light')
         get.Id('page-body').classList.add('dark')
     }else {
-        theme = "light"
+        set.Local('theme', false)
         get.Id('page-body').classList.remove('dark')
         get.Id('page-body').classList.add('light')
     }
@@ -77,6 +76,11 @@ const changeTheme = () => {
     const ToDoList = get.Local('localToDoList')
     || [{id: get.Date() - 500, title: 'Be Healthy', desc: 'Practice exercises', status: false,}]
     
+    if (get.Local('theme')) {
+        get.Id('page-body').classList.remove('light')
+        get.Id('page-body').classList.add('dark')
+    }
+
     if (ToDoList) {
         for (const toDo of ToDoList) {
             const toDoHTML = createNewToDo(toDo)
