@@ -7,13 +7,18 @@
 @import './page.css';
 
 :root {
+    --border: 1px solid #ddd;
     --background:#dfdfdf;
     --primary: #607b8b;
-    --border: 1px solid #ddd;
+    --border_dark: 1px solid #444;
+    --background_dark: #2e2e2e;
+    --page_items_dark: #3c3c3c;
+    --primary_dark: #202020;
 }
 
 * {
     box-sizing: border-box;
+    transition: background .7s;
     font-family: Ubuntu;
     border: none;
     padding: 0;
@@ -25,8 +30,16 @@
 }
 
 body {
-    background: var(--background) fixed;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+body.light {
+    background: var(--background);
+}
+
+body.dark {
+    background: var(--background_dark);
 }
 
 .material-icons {

@@ -1,4 +1,5 @@
 var isEditing = false
+var theme = "light"
 
 // Function that save the input from user
 const saveToDo = ev => {
@@ -57,6 +58,18 @@ function createNewToDo(data) {
 
 function checkIfIsEditing() {
     confirm('There is an edition in progress, do you still want to continue?')
+}
+
+const changeTheme = () => {
+    if (theme == "light") {
+        theme = "dark"
+        get.Id('page-body').classList.remove('light')
+        get.Id('page-body').classList.add('dark')
+    }else {
+        theme = "light"
+        get.Id('page-body').classList.remove('dark')
+        get.Id('page-body').classList.add('light')
+    }
 }
 
 //Loaded once function that restore the To Do List in page from the Data Saved in Local Storage

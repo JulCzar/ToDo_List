@@ -24,5 +24,10 @@
 }
 
 .list .material-icons:hover {
-    background-color: #d3d3d3;
+    background-color: #55555552;
+}
+
+body.dark .list {
+    background: var(--page_items_dark);
+    color: #cecece;
 }
