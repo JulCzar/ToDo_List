@@ -1,18 +1,14 @@
-const checkElement = id => {
+const checkElement = identifier => {
     const LocalToDoList = get.Local('localToDoList')
     const ToDosOnScreen = get.Queries('.to-do')
 
     for (const toDo of LocalToDoList) {
-        if (toDo.id == id) toDo.status = !toDo.status
+        if (toDo.id == identifier)
+            toDo.status = !toDo.status
     }
 
-    for (const toDo of ToDosOnScreen) {
-        del.element(toDo)
-    }
-    
-    for (const toDo of LocalToDoList) {
-        addToDoToScreen(toDo)
-    }
+    ToDosOnScreen.forEach(del.element)
+    LocalToDoList.forEach(addToDoToScreen)
 
     set.Local('localToDoList', LocalToDoList)
 

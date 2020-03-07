@@ -23,7 +23,7 @@
 }
 
 .list .material-icons:hover {
-    background-color: #55555552;
+    background-color: rgba(128, 128, 128, 0.3);
 }
 
 body.light .table-head {

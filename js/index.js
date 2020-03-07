@@ -1,18 +1,21 @@
-var isEditing = false
+var isEditing = false;
+var status = false;
 
 // Function that save the input from user
 const saveToDo = ev => {
-    isEditing = false
     // prevent the page from reloading at submit
     ev.preventDefault()
+    isEditing = false
 
     // create an object containing the data of the ToDo the users typed
     const newToDo = {
         id: get.Date(),
         title: title.value,
         desc: desc.value,
-        status: false,
+        status: JSON.parse(status)
     }
+
+    status = false
 
     saveDataToLocalStorage()
     
@@ -37,46 +40,42 @@ const saveToDo = ev => {
 }
 
 //create an HTML element stringified containing the data of the ToDo to be loaded in page
-function createNewToDo(data) {
+const createNewToDo = ({ id, status, title, desc }) => {
     return (
-        `<div class="to-do" id='${data.id}'>
-            <div onclick='checkElement("${data.id}")' class="to-do-content">
-                <i class="material-icons">${data.status?'check_circle_outline':'radio_button_unchecked'}</i>
+        `<div class="to-do" id='${id}'>
+            <div onclick='checkElement("${id}")' class="to-do-content">
+                <i class="material-icons">${status?'check_circle_outline':'radio_button_unchecked'}</i>
                 <div class="to-do-info">
-                    <h2 class="to-do-title">${data.title}</h2>
-                    <h5 class="to-do-desc">${data.desc}</h5>
+                    <h2 class="to-do-title">${title}</h2>
+                    <h5 class="to-do-desc">${desc}</h5>
                 </div>
             </div>
             <div class="to-do-actions">
-                <i onclick='editElement("${data.id}")' class="material-icons">edit</i>
-                <i onclick='deleteElement("${data.id}")' class="material-icons">clear</i>
+                <i onclick='editElement("${id}")' class="material-icons">edit</i>
+                <i onclick='deleteElement("${id}")' class="material-icons">clear</i>
             </div>
         </div>`
     )
 }
 
-function checkIfIsEditing() {
-    confirm('There is an edition in progress, do you still want to continue?')
-}
-
 const changeTheme = () => {
-    if (!get.Local('theme')) {
-        set.Local('theme', true)
+    if (get.Local('theme') != 'dark') {
+        set.Local('theme', 'dark')
         get.Id('page-body').classList.remove('light')
         get.Id('page-body').classList.add('dark')
     }else {
-        set.Local('theme', false)
+        set.Local('theme', 'light')
         get.Id('page-body').classList.remove('dark')
         get.Id('page-body').classList.add('light')
     }
 }
 
 //Loaded once function that restore the To Do List in page from the Data Saved in Local Storage
-;(async function () {
+;(function () {
     const ToDoList = get.Local('localToDoList')
-    || [{id: get.Date() - 500, title: 'Be Healthy', desc: 'Practice exercises', status: false,}]
+    || [{id: get.Date(), title: 'Be Healthy', desc: 'Practice exercises', status: false,}]
     
-    if (get.Local('theme')) {
+    if (get.Local('theme') == 'dark') {
         get.Id('page-body').classList.remove('light')
         get.Id('page-body').classList.add('dark')
     }
@@ -93,7 +92,8 @@ const changeTheme = () => {
     }
 
     window.onbeforeunload = function() {
-        if (this.isEditing) return confirm();
+        if (this.isEditing)
+            return confirm()
     }
 })()
 

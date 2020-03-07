@@ -1,20 +1,10 @@
-const deleteElement = id => {
+const deleteElement = identifier => {
     const LocalToDoList = get.Local('localToDoList')
     const ToDosOnScreen = get.Queries('.to-do')
 
-    LocalToDoList.forEach((toDo, i) => {
-        if (toDo.id == id) {
-            LocalToDoList.splice(i, 1)
-        }
-    })
-
-    for (const toDo of ToDosOnScreen) {
-        del.element(toDo)
-    }
-    
-    for (const toDo of LocalToDoList) {
-        addToDoToScreen(toDo)
-    }
+    LocalToDoList.forEach(findWhoDelete)
+    ToDosOnScreen.forEach(del.element)
+    LocalToDoList.forEach(addToDoToScreen)
 
     set.Local('localToDoList', LocalToDoList)
 
@@ -22,5 +12,10 @@ const deleteElement = id => {
         const newToDoHtml = createNewToDo(toDo)
 
         get.Id('to-dos').insertAdjacentHTML('beforeend', newToDoHtml)
+    }
+    function findWhoDelete({ id }, i) {
+        if (id== identifier) {
+            LocalToDoList.splice(i, 1)
+        }
     }
 }
