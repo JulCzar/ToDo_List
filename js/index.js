@@ -42,7 +42,7 @@ const saveToDo = ev => {
 //create an HTML element stringified containing the data of the ToDo to be loaded in page
 const createNewToDo = ({ id, status, title, desc }) => {
     return (
-        `<div class="to-do" id='${id}'>
+        `<div draggable="true" class="to-do" id='${id}'>
             <div onclick='checkElement("${id}")' class="to-do-content">
                 <i class="material-icons">${status?'check_circle_outline':'radio_button_unchecked'}</i>
                 <div class="to-do-info">
