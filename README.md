@@ -6,5 +6,5 @@
 
 Um programa simples onde simula uma lista de tarefas utilizando JavaScript
 
--Simples e fácil acesso
--Um ótimo elemento para estudo
+- Simples e fácil acesso
+- Um ótimo elemento para estudo
