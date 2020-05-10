@@ -1,7 +1,9 @@
 @import './to-dos.css';
 
 .list {
+    background: var(--page_items) !important;
     flex-direction: column;
+    color: currentColor;
     width: 750px;
 }
 
@@ -11,6 +13,7 @@
 }
 
 .table-head {
+    border-bottom: var(--border);
     padding: 5px;
     height: 35px;
     width: 100%;
@@ -26,15 +29,6 @@
     background-color: rgba(128, 128, 128, 0.3);
 }
 
-body.light .table-head {
-    border-bottom: var(--border);
-}
-
-body.dark .table-head {
-    border-bottom: var(--border_dark);
-}
-
-body.dark .list {
-    background: var(--page_items_dark);
+.dark .list {
     color: #cecece;
 }

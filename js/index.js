@@ -61,12 +61,10 @@ const createNewToDo = ({ id, status, title, desc }) => {
 const changeTheme = () => {
     if (get.Local('theme') != 'dark') {
         set.Local('theme', 'dark')
-        get.Id('page-body').classList.remove('light')
-        get.Id('page-body').classList.add('dark')
+        d.body.classList.replace('light', 'dark')
     }else {
         set.Local('theme', 'light')
-        get.Id('page-body').classList.remove('dark')
-        get.Id('page-body').classList.add('light')
+        d.body.classList.replace('dark', 'light')
     }
 }
 
@@ -76,8 +74,8 @@ const changeTheme = () => {
     || [{id: get.Date(), title: 'Be Healthy', desc: 'Practice exercises', status: false,}]
     
     if (get.Local('theme') == 'dark') {
-        get.Id('page-body').classList.remove('light')
-        get.Id('page-body').classList.add('dark')
+        d.body.classList.remove('light')
+        d.body.classList.add('dark')
     }
 
     if (ToDoList) {

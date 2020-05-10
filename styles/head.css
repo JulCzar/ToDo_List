@@ -1,13 +1,6 @@
-body.light #head {
-    background: var(--primary);
-}
-
-body.dark #head {
-    background: var(--primary_dark);
-}
-
 #head {
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .15);
+    background: var(--primary);
     justify-content: space-between;
     align-items: center;
     position: fixed;

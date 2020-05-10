@@ -11,12 +11,14 @@
 }
 
 .data-input {
+    border-bottom: var(--border);
     margin-top: 10px;
     padding: 5px;
     height: 25px;
 }
 
 .submit {
+    background: var(--background);
     justify-content: center;
     border-radius: 5px;
     font-weight: 800;
@@ -26,41 +28,38 @@
     padding: 15px;
 }
 
-body.dark .submit {
-    background: var(--background_dark);
+
+
+.form {
+    background: var(--page_items) !important;
+    color: currentColor;
 }
 
-body.light .submit:hover {
-    background-color: green;
-    transition: .3s;
-    color: white;
-}
-
-body.dark .submit:hover {
-    background-color: #252525;
-    transition: .3s;
-}
-
-body.light .data-input {
-    border-bottom: var(--border);
-}
-
-body.dark .data-input {
-    border-bottom: var(--border_dark);
-}
-
-body.dark .form {
-    background: var(--page_items_dark);
-    color: white;
-}
-
-body.dark input {
-    background: var(--page_items_dark);
-    color: white;
+input {
+    outline: none;
+    background: var(--page_items);
+    color: currentColor;
 }
 
 @media (max-width: 950px) {
+    .submit:active {
+        background-color: var(--buttom-hover);
+        color: currentColor;
+        transition: .3s;
+        color: white;
+    }
+
     .form-box {
         width: 100%;
+    }
+}
+
+
+@media (min-width: 950px) {
+    .submit:hover {
+        background-color: var(--buttom-hover);
+        color: currentColor;
+        transition: .3s;
+        color: white;
     }
 }

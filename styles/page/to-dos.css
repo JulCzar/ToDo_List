@@ -6,6 +6,7 @@
 .to-do {
     justify-content: space-between;
     align-items: center;
+    border-radius: 50px !important;
 }
 
 .to-do, .to-do-content {
