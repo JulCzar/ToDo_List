@@ -9,6 +9,10 @@
     border-radius: 50px !important;
 }
 
+.to-do[status="true"] {
+    opacity: 0.5;
+}
+
 .to-do, .to-do-content {
     align-items: center;
     height: 50px;
@@ -21,6 +25,10 @@
 
 .to-do-info {
     flex-direction: column;
+}
+
+.to-do .complete {
+    text-decoration-line: line-through;
 }
 
 .to-do-title {
