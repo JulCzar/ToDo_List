@@ -1,34 +1,45 @@
 @import './to-dos.css';
 
 .list {
+  background: var(--page_items) !important;
+  flex-direction: column;
+  color: currentColor;
+  width: 750px;
+  max-height: 90vh;
+}
+
+.table-head, .table-title {
+  justify-content: center;
+  align-items: center;
+}
+
+.table-head {
+  border-bottom: var(--border);
+  padding: 5px;
+  height: 35px;
+  width: 100%;
+}
+
+.list .material-icons {
+  border-radius: 50%;
+  transition: .5s;
+  padding: 5px;
+}
+
+.list .material-icons:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.dark .list {
+  color: #cecece;
+}
+
+@media (max-width: 950px) {
+  .list {
     background: var(--page_items) !important;
     flex-direction: column;
     color: currentColor;
     width: 750px;
-}
-
-.table-head, .table-title {
-    justify-content: center;
-    align-items: center;
-}
-
-.table-head {
-    border-bottom: var(--border);
-    padding: 5px;
-    height: 35px;
-    width: 100%;
-}
-
-.list .material-icons {
-    border-radius: 50%;
-    transition: .5s;
-    padding: 5px;
-}
-
-.list .material-icons:hover {
-    background-color: rgba(128, 128, 128, 0.3);
-}
-
-.dark .list {
-    color: #cecece;
+    max-height: 60vh;
+  }
 }

@@ -2,53 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>To Dos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>To Dos</title>
 </head>
 
 <body class="light">
-    <div id="app">
-        <header id="head">
-            <div class="logo">
-                <i class="material-icons">check</i>
-                <h3 class="page-title">To Do List</h3>
-            </div>
-            <div onclick="changeTheme()" class="aside material-icons">color_lens</div>
-        </header>
+  <div id="app">
+    <header id="head">
+      <div class="logo">
+        <i class="material-icons">check</i>
+        <h3 class="page-title">To Do List</h3>
+      </div>
+      <div onclick="changeTheme()" class="aside material-icons">color_lens</div>
+    </header>
 
-        <div class="page">
-            <div class="form">
-                <form id="form" action="createToDo" class="form-box">
-                    <div class="title">
-                        <label for="title">Title</label>
-                        <input class="data-input" type="text" id="title" required>
-                    </div>
-                    <div class="desc">
-                        <label for="desc">Description</label>
-                        <input class="data-input" type="text" id="desc">
-                    </div>
-                    <input class="submit" type="submit">
-                </form>
-            </div>
+    <div class="page">
+      <div class="form">
+        <form id="form" action="createToDo" class="form-box">
+          <div class="title">
+            <label for="title">Title</label>
+            <input class="data-input" type="text" id="title" required>
+          </div>
+          <div class="desc">
+            <label for="desc">Description</label>
+            <input class="data-input" type="text" id="desc">
+          </div>
+          <input class="submit" type="submit">
+        </form>
+      </div>
 
-            <div class="list">
-                <div class="table-head">
-                    <h3 class="table-title">List</h3>
-                </div>
-                <div id="to-dos" class="to-dos"></div>
-            </div>
+      <div class="list">
+        <div class="table-head">
+          <h3 class="table-title">List</h3>
         </div>
+        <div id="to-dos" class="to-dos"></div>
+      </div>
     </div>
+  </div>
 
-    <script src="https://julczar.github.io/CzarK.js/index.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/utils/dragndrop.js"></script>
-    <script src="./js/utils/check.js"></script>
-    <script src="./js/utils/edit.js"></script>
-    <script src="./js/utils/delete.js"></script>
+  <script src="https://julczar.github.io/CzarK.js/index.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/utils/dragndrop.js"></script>
+  <script src="./js/utils/check.js"></script>
+  <script src="./js/utils/edit.js"></script>
+  <script src="./js/utils/delete.js"></script>
 </body>
 
 </html>

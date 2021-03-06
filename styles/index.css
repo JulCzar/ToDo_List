@@ -8,46 +8,47 @@
 
 
 .light {
-    --buttom-hover: var(--primary);
-    --border: 1px solid #888;
-    --background: #c2c2c2;
-    --page_items: #dfdfdf;
-    --primary: #278;
+  --buttom-hover: var(--primary);
+  --border: 1px solid #888;
+  --background: #c2c2c2;
+  --page_items: #dfdfdf;
+  --primary: #278;
 }
 
 .dark {
-    --border: 1px solid #555;
-    --background: #2e2e2e;
-    --page_items: #3c3c3c;
-    --buttom-hover: #158;
-    --primary: #222;
-    color: white;
+  --border: 1px solid #555;
+  --background: #2e2e2e;
+  --page_items: #3c3c3c;
+  --buttom-hover: #158;
+  --primary: #222;
+  color: white;
 }
 
 * {
-    transition: background .7s;
-    box-sizing: border-box;
-    font-family: Ubuntu;
-    border: none;
-    padding: 0;
-    margin: 0;
+  overflow: hidden;
+  transition: background .7s;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 #app, #app * {
-    display: flex;
+  display: flex;
 }
 
 body {
-    background: var(--background);
-    background-attachment: fixed;
-    background-size: cover;
-    
+  background: var(--background);
+  background-attachment: fixed;
+  background-size: cover;
+  
 }
 .material-icons {
-    font-size: 32px !important;
-    cursor: pointer;
+  font-size: 32px !important;
+  cursor: pointer;
 }
 
 @media (max-width: 950px) {
-    #head {display: flex;}
+  #head {display: flex;}
 }

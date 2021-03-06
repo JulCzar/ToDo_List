@@ -1,46 +1,59 @@
 .to-dos {
-    flex-direction: column;
-    padding: 15px 5px;
+  flex-direction: column;
+  padding: 15px 5px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.to-dos::-webkit-scrollbar {
+  background: #0003;
+  width: 5px;
+  border-radius: 5px;
+}
+
+.to-dos::-webkit-scrollbar-thumb {
+  background: #0002;
 }
 
 .to-do {
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px !important;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px !important;
 }
 
 .to-do[status="true"] {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .to-do, .to-do-content {
-    align-items: center;
-    height: 50px;
-    width: 100%;
+  align-items: center;
+  min-height: 50px;
+  height: 50px;
+  width: 100%;
 }
 
 .to-do-content > * {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .to-do-info {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .to-do[status="true"] .to-do-title,
 .to-do[status="true"] .to-do-desc {
-    text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 .to-do-title {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .to-do-desc {
-    color: gray;
-    font-weight: 500;
+  color: gray;
+  font-weight: 500;
 }
 
 .to-do-actions > * {
-    margin-left: 5px;
+  margin-left: 5px;
 }

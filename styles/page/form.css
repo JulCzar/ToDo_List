@@ -1,65 +1,65 @@
 .form .form-box {
-    flex-direction: column;
-    font-weight: 500;
-    padding: 5px;
+  flex-direction: column;
+  font-weight: 500;
+  padding: 5px;
 }
 
 .title, .desc {
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .data-input {
-    border-bottom: var(--border);
-    margin-top: 10px;
-    padding: 5px;
-    height: 25px;
+  border-bottom: var(--border);
+  margin-top: 10px;
+  padding: 5px;
+  height: 25px;
 }
 
 .submit {
-    background: var(--background);
-    justify-content: center;
-    border-radius: 5px;
-    font-weight: 800;
-    transition: .8s;
-    cursor: pointer;
-    outline: unset;
-    padding: 15px;
+  background: var(--background);
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: 800;
+  transition: .8s;
+  cursor: pointer;
+  outline: unset;
+  padding: 15px;
 }
 
 
 
 .form {
-    background: var(--page_items) !important;
-    color: currentColor;
+  background: var(--page_items) !important;
+  color: currentColor;
 }
 
 input {
-    outline: none;
-    background: var(--page_items);
-    color: currentColor;
+  outline: none;
+  background: var(--page_items);
+  color: currentColor;
 }
 
 @media (max-width: 950px) {
-    .submit:active {
-        background-color: var(--buttom-hover);
-        color: currentColor;
-        transition: .3s;
-        color: white;
-    }
+  .submit:active {
+    background-color: var(--buttom-hover);
+    color: currentColor;
+    transition: .3s;
+    color: white;
+  }
 
-    .form-box {
-        width: 100%;
-    }
+  .form-box {
+    width: 100%;
+  }
 }
 
 
 @media (min-width: 950px) {
-    .submit:hover {
-        background-color: var(--buttom-hover);
-        color: currentColor;
-        transition: .3s;
-        color: white;
-    }
+  .submit:hover {
+    background-color: var(--buttom-hover);
+    color: currentColor;
+    transition: .3s;
+    color: white;
+  }
 }
