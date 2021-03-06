@@ -6,13 +6,13 @@
 }
 
 .to-dos::-webkit-scrollbar {
-  background: #0003;
-  width: 5px;
+  background: #0001;
+  width: 2px;
   border-radius: 5px;
 }
 
 .to-dos::-webkit-scrollbar-thumb {
-  background: #0002;
+  background: #0006;
 }
 
 .to-do {
