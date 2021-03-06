@@ -27,7 +27,8 @@
     flex-direction: column;
 }
 
-.to-do .complete {
+.to-do[status="true"] .to-do-title,
+.to-do[status="true"] .to-do-desc {
     text-decoration-line: line-through;
 }
 
